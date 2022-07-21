@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vienna Location Finder</title>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/nav.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container-flex">
+            <div id="logo" style="padding: 0.75rem; color: white">
+                <h1 class="company-name">Klagenfurt Tour Company</h1>
+            </div>
+            <nav style="padding: 1.5rem;">
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="topnav" id="myTopnav">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#about">About</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Content -->
+
+        <!-- add map here -->
+        <div id="map"></div>
+
+
+    </main>
+
+    <footer class="footer">
+        <div id="weather" style="display: flex; justify-content: space-around; margin-bottom: 1rem;">
+            <!-- weather stuff here --> 
+
+        </div>
+
+        <!-- add social links here -->
+        <div id="socials">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/alen.leviosa/" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div>
+
+        <div class="footer__addr">
+            <h1 class="footer__logo">Klagenfurt Tour Company</h1>
+
+            <h2>Contact</h2>
+
+            <address>
+                Somewhere in Klagenfurt 1060<br>
+
+                <a class="footer__btn" href="mailto:example@mail.com">Contact Us</a>
+            </address>
+        </div>
+
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">Links</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Tours</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Print</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Alternative Ads</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Restaurants & Bars</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="#">Restaurant One</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Restaurant Two</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Restaurant Three</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Restaurant Four</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Bar One</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Bar Two</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Terms of Use</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sitemap</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="legal">
+            <p>&copy; 2022 Coding School Tours. All rights reserved.</p>
+
+            <div class="legal__links">
+                <span>Made with <span class="heart">♥</span> from Vienna</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("myTopnav");
+            if (nav.className === "topnav") {
+                nav.className += " responsive";
+            } else {
+                nav.className = "topnav";
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="script/map.js"></script>
+    <script src="script/weather.js"></script>
+</body>
+
+</html>
